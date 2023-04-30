@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CameraMV</string>
+    <string name="scan_button">сканировать</string>
 </resources>

@@ -40,8 +40,10 @@ class ScanActivity: AppCompatActivity() {
         val analizer = ImageAnalysis.Builder()
             .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
             .build()
+
+        val DrawView = findViewById<DrawView>(R.id.draw_view)
         analizer.setAnalyzer(mainExecutor,
-            ImageProccesor()
+            ImageProccesor(DrawView)
         )
         cameraProvider?.bindToLifecycle(this,cameraSelector,preview,analizer)
     }
